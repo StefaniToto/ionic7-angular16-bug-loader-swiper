@@ -1,4 +1,37 @@
 <div id="container">
   <strong>{{ name }}</strong>
-  <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <p>
+    Explore
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://ionicframework.com/docs/components"
+      >UI Components</a
+    >
+  </p>
+
+  <swiper-container #slides [allowTouchMove]="false" pagination="false">
+    <swiper-slide
+      >Slide 1
+      <ion-button (click)="changeSlide()" mode="md">Change slide 1</ion-button>
+    </swiper-slide>
+    <swiper-slide
+      >Slide 2
+      <ion-button (click)="changeSlide()" mode="md"
+        >Change slide 2</ion-button
+      ></swiper-slide
+    >
+    <swiper-slide
+      >Slide 3
+      <ion-button (click)="changeSlide()" mode="md"
+        >Change slide 3</ion-button
+      ></swiper-slide
+    >
+  </swiper-container>
+
+  <ng-template #loading>
+    <div *ngIf="isLoading">
+      <ion-spinner name="crescent"></ion-spinner>
+    </div>
+  </ng-template>
 </div>
