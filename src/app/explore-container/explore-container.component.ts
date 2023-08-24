@@ -13,7 +13,6 @@ export class ExploreContainerComponent {
   public isLoading = false;
   constructor(private loadingController: LoadingController) {}
   @ViewChild('slides') public slides: ElementRef | undefined;
-  ionViewDidEnter() {}
   public async changeSlide(): Promise<void> {
     this.showAutoHideLoader();
   }
