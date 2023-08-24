@@ -35,11 +35,7 @@ export class ExploreContainerComponent {
           //   this.slideNext();
           // }, 0);
         });
-
-        res.hidden;
       });
-    this.slideNext();
-    await this.loadingController.dismiss();
   }
 
   private slideNext(): void {
