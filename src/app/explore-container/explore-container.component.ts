@@ -26,14 +26,24 @@ export class ExploreContainerComponent {
       .then((res) => {
         res.present();
 
-        res.onDidDismiss().then(() => {
-          console.log('Loading dismissed! after 2 Seconds');
-          this.slideNext(); // not working
+        setTimeout(() => {
+          //this is working
+          this.slideNext();
+        }, 1000);
 
-          // setTimeout(() => { //this is working
-          //   this.slideNext();
-          // }, 0);
-        });
+        setTimeout(() => {
+          //this is working
+          res.dismiss();
+        }, 500);
+
+        // res.onWillDismiss().then(() => {
+        //   console.log('Loading dismissed! after 2 Seconds');
+        //   this.slideNext(); // not working
+
+        //   // setTimeout(() => { //this is working
+        //   //   this.slideNext();
+        //   // }, 0);
+        // });
       });
   }
 
